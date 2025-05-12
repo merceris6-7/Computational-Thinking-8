@@ -3,10 +3,12 @@ import turtle
 t = turtle.Turtle()
 
 t.goto(100, 0)
+#Turtle color is red
 t.color("red")
+#screen color is black
 turtle.Screen().bgcolor("black")
 
-
+#turtle movement
 for i in range(5):
     t.forward(100)
     t.left(72)
