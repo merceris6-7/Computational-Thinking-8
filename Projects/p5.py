@@ -25,8 +25,8 @@ window = turtle.Screen()
 window.tracer(0)
 
 # Section 2: Setup
-s1 = create_sprite ("pug",-280,-190)
-set_background ("maze")
+s1 = create_sprite ("dug",-280,-190)
+set_background ("maze") 
 s2 = create_sprite ("choclate",-340,-190)
 
 # Section 3: Controls
@@ -64,15 +64,17 @@ while True:
     
  	# TODO - code for automatic actions
 
-
-
+	# look towards the player
+	s2.setheading(180  /3.14 * math.atan2(s1.ycor()-s2.ycor(), s1.xcor()-s2.xcor()))
+	# move forward a little
+	s2.forward (1.5)
 
 
 
 	window.update()
 
-	#if :
-	# 	break
+	if get_distance(s1,s2) < 25:
+		break
 	
 
 print("Game Over")
